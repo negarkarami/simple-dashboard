@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: persian;
+  src: url('./static/font/persian/FontPersian.eot');
+  src: url('./static/font/persian/FontPersian.eot?#iefix') format('embedded-opentype'),
+  url('./static/font/persian/FontPersian.woff2') format('woff2'),
+  url('./static/font/persian/FontPersian.woff') format('woff'),
+  url('./static/font/persian/FontPersian.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*{
+  font-family: 'persian';
+}
+
