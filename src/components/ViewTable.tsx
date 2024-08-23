@@ -1,11 +1,9 @@
-import { alpha, Box, Stack, styled, Typography } from "@mui/material"
+import { alpha, Box, InputBase, Stack, styled, Typography } from "@mui/material"
 import { DataGrid, GridColDef, gridClasses } from '@mui/x-data-grid';
 import axios from "axios";
 import { useEffect, useState } from "react";
 import LoadingComponent from "./LoadingComponent";
-import Preview from "./DetailsPreviewTable";
 import DetailsPreviewTable from "./DetailsPreviewTable";
-
 
 
 const ViewTable = () => {
@@ -146,11 +144,44 @@ const ViewTable = () => {
       };
       console.log('fdffff', item)
 
+      const [text, setText] = useState("");
+
+      const onSearchTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const filteredRows = dataTable.filter((row:any) => {
+          // console.log('CCCCy', typeof(row))
+          return row.firstName.toLowerCase().includes(text.toLowerCase());
+        });
+        setDataTable(filteredRows)
+        setText(e.target.value);
+      };
+    
 
     return(
       <>
+      <Stack direction={'row'}spacing={3} width={'100%'} justifyContent={'center'} alignItems={'center'} mt={10}>
+      <Stack
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        width: 300,
+        height: 36,
+        borderRadius: 1,
+        border: '1px solid',
+      }}
+    >
+      <InputBase
+        value={text}
+        autoFocus
+        onChange={onSearchTextChange}
+        sx={{flex: 1, backgroundColor: "transparent" }}
+        placeholder={'search for firstName'}
+      />
+    </Stack>
+
       <Typography variant="h5" fontWeight={'bold'} fontFamily={'persian'} m={3}>User Information </Typography>
-        <Box
+      </Stack>
+
+    <Box
       m={8}
       border={'2px solid rgba(75, 217, 246, 0.8)'}
       borderRadius={1.5}
@@ -166,7 +197,6 @@ const ViewTable = () => {
       [`& .${gridClasses.row}`]: {
         backgroundColor: alpha('rgba(221, 245, 244, 0.8)', 0.5),
     },
-
     
       }}
     >

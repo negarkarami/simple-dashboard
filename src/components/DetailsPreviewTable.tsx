@@ -11,6 +11,7 @@ interface SimpleDialogProps {
 
 
 const DetailsPreviewTable: React.FC <SimpleDialogProps> = ({open, handleClose, content})=> {
+  
     return(
         <Dialog open={open} onClose={handleClose} aria-labelledby="dialog-title"   maxWidth="md" fullWidth >
         <DialogContent>
