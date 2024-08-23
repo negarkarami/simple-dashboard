@@ -11,7 +11,7 @@ interface SimpleDialogProps {
 
 
 const DetailsPreviewTable: React.FC <SimpleDialogProps> = ({open, handleClose, content})=> {
-  
+
     return(
         <Dialog open={open} onClose={handleClose} aria-labelledby="dialog-title"   maxWidth="md" fullWidth >
         <DialogContent>
@@ -28,21 +28,21 @@ const DetailsPreviewTable: React.FC <SimpleDialogProps> = ({open, handleClose, c
             </Stack>
 
             <Stack spacing={2} direction="row" p={2} bgcolor="rgba(75, 217, 246, 0.8)" sx={{ borderRadius: 1.5 }}>
-              <PreviewWrapper label={"firstName"} value={content?.email} />
-              <PreviewWrapper label={"lastName "} value={content?.street}/>
-              <PreviewWrapper label={"phone"} value={content?.suite} />
+              <PreviewWrapper label={"email"} value={content?.email} />
+              <PreviewWrapper label={"street "} value={content?.street}/>
+              <PreviewWrapper label={"suite"} value={content?.suite} />
             </Stack>
 
             <Stack spacing={2} direction="row" p={2} bgcolor="rgba(75, 217, 246, 0.8)" sx={{ borderRadius: 1.5 }}>
-              <PreviewWrapper label={"firstName"} value={content?.zipcode} />
-              <PreviewWrapper label={"lastName "} value={content?.city}/>
-              <PreviewWrapper label={"phone"} value={content?.companyName} />
+              <PreviewWrapper label={"zipcode"} value={content?.zipcode} />
+              <PreviewWrapper label={"city"} value={content?.city}/>
+              <PreviewWrapper label={"companyName"} value={content?.companyName} />
             </Stack>
 
             <Stack spacing={2} direction="row" p={2} bgcolor="rgba(75, 217, 246, 0.8)" sx={{ borderRadius: 1.5 }}>
-              <PreviewWrapper label={"firstName"} value={content?.catchPhrase} />
-              <PreviewWrapper label={"lastName "} value={content?.bs}/>
-              <PreviewWrapper label={"phone"} value={content?.companyName} />
+              <PreviewWrapper label={"catchPhrase"} value={content?.catchPhrase} />
+              <PreviewWrapper label={"bs "} value={content?.bs}/>
+              <PreviewWrapper label={"companyName"} value={content?.companyName} />
             </Stack>
           </Stack>
         </Stack>
