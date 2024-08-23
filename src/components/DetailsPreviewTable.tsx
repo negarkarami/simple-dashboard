@@ -5,7 +5,9 @@ import PreviewWrapper from "./PreviewWrapper"
 interface SimpleDialogProps {  
     open: boolean;
     handleClose: () =>void; 
-    content: any}
+    content: any
+  }
+
 
 
 const DetailsPreviewTable: React.FC <SimpleDialogProps> = ({open, handleClose, content})=> {
@@ -21,10 +23,25 @@ const DetailsPreviewTable: React.FC <SimpleDialogProps> = ({open, handleClose, c
             <Stack spacing={2} direction="row" p={2} bgcolor="rgba(75, 217, 246, 0.8)" sx={{ borderRadius: 1.5 }}>
               <PreviewWrapper label={"firstName"} value={content?.firstName} />
               <PreviewWrapper label={"lastName "} value={content?.lastName}/>
-              {/* <PreviewWrapper label={"ایمیل"} value={content?.email}/> */}
               <PreviewWrapper label={"phone"} value={content?.phone} />
+            </Stack>
 
-        
+            <Stack spacing={2} direction="row" p={2} bgcolor="rgba(75, 217, 246, 0.8)" sx={{ borderRadius: 1.5 }}>
+              <PreviewWrapper label={"firstName"} value={content?.email} />
+              <PreviewWrapper label={"lastName "} value={content?.street}/>
+              <PreviewWrapper label={"phone"} value={content?.suite} />
+            </Stack>
+
+            <Stack spacing={2} direction="row" p={2} bgcolor="rgba(75, 217, 246, 0.8)" sx={{ borderRadius: 1.5 }}>
+              <PreviewWrapper label={"firstName"} value={content?.zipcode} />
+              <PreviewWrapper label={"lastName "} value={content?.city}/>
+              <PreviewWrapper label={"phone"} value={content?.companyName} />
+            </Stack>
+
+            <Stack spacing={2} direction="row" p={2} bgcolor="rgba(75, 217, 246, 0.8)" sx={{ borderRadius: 1.5 }}>
+              <PreviewWrapper label={"firstName"} value={content?.catchPhrase} />
+              <PreviewWrapper label={"lastName "} value={content?.bs}/>
+              <PreviewWrapper label={"phone"} value={content?.companyName} />
             </Stack>
           </Stack>
         </Stack>
@@ -34,21 +51,3 @@ const DetailsPreviewTable: React.FC <SimpleDialogProps> = ({open, handleClose, c
 }
 
 export default DetailsPreviewTable
-
-
-
-
-
-
-    // firstName
-// lastName
-// email
-// phone
-// website
-// street
-// suite
-// zipcode
-// city
-// companyName
-// catchPhrase
-// bs

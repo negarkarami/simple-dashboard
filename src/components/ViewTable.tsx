@@ -64,7 +64,7 @@ const ViewTable = () => {
         { field: 'id', headerName: 'ID', width: 90 },
         {
           field: 'firstName',
-          headerName: 'firstName',
+          headerName: 'FirstName',
           align: "center",
           headerAlign: "center",
           flex: 1,
@@ -74,7 +74,7 @@ const ViewTable = () => {
         },
         {
           field: 'lastName',
-          headerName: 'lastName',
+          headerName: 'LastName',
           align: "center",
           headerAlign: "center",
           flex: 1,
@@ -84,7 +84,7 @@ const ViewTable = () => {
         },
         {
           field: 'fullName',
-          headerName: 'fullName',
+          headerName: 'FullName',
           align: "center",
           headerAlign: "center",
           flex: 1,
@@ -95,7 +95,7 @@ const ViewTable = () => {
         },
         {
           field: 'email',
-          headerName: 'email',
+          headerName: 'Email',
           align: "center",
           headerAlign: "center",
           flex: 1,
@@ -105,7 +105,7 @@ const ViewTable = () => {
         },
         {
           field: 'phone',
-          headerName: 'phone',
+          headerName: 'Phone',
           align: "center",
           headerAlign: "center",
           flex: 1,
@@ -115,7 +115,7 @@ const ViewTable = () => {
         },
         {
           field: 'website',
-          headerName: 'website ',
+          headerName: 'Website ',
           align: "center",
           headerAlign: "center",
           flex: 1,

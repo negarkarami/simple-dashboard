@@ -1,7 +1,14 @@
 import { Stack, Typography } from "@mui/material";
 import React from "react";
 
-const PreviewWrapper = ({ label, value }) => {
+
+interface PreviewProps {  
+  label: string;
+  value: any
+}
+
+
+const PreviewWrapper:React.FC <PreviewProps> = ({ label, value }) => {
   return (
     <Stack
       width="100%"
